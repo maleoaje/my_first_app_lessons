@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/in_chat.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -12,6 +13,7 @@ class ChatsPage extends StatelessWidget {
         onPressed: null,
         shape: CircleBorder(),
         backgroundColor: Color(0xff01af99),
+        child: Icon(Icons.chat),
       ),
       //listview widget
       body: ListView(
@@ -146,112 +148,128 @@ class ChatsPage extends StatelessWidget {
             height: 20,
           ),
           chatCard(
-              'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-              'goku',
-              'turn to ultra instinct',
-              '6:00am',
-              '10'),
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
+          chatCard(
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
+          chatCard(
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
+          chatCard(
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
+          chatCard(
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
+          chatCard(
+            context,
+            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'goku',
+            'turn to ultra instinct',
+            '6:00am',
+            '10',
+          ),
           //=====row======
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              //=========column=========
-              Column(
-                children: [
-                  //==========chidera starts image==========
-                  Image.asset(
-                    'images/horse.jpeg',
-                    fit: BoxFit.cover,
-                    width: 190,
-                    height: 200,
-                  ),
-                  //=========chidera ends image==========
-                  //========text=========
-                  const Text(
-                    "ARABIAN HORSE",
-                    style: TextStyle(color: Colors.white),
-                  )
-                ],
-              ),
-              //========column=========
-              Column(
-                children: [
-                  Image.network(
-                    'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-                    fit: BoxFit.cover,
-                    width: 190,
-                    height: 200,
-                  ),
-                  //===========text=========
-                  const Text(
-                    "goku and frieza",
-                    style: TextStyle(color: Colors.white),
-                  )
-                ],
-              ),
-            ],
-          )
         ],
       ),
     );
   }
 
-  Widget chatCard(image, name, message, time, messageCount) {
+  Widget chatCard(context, image, name, message, time, messageCount) {
     //========row========-==
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        //=======row========
-        Row(
+    return GestureDetector(
+      onTap: () {
+        // Navigator.push(context, MaterialPageRoute(
+        //           builder: (context) => SecondPage(),
+        //         ));
+
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const InChatsPage()));
+      },
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            // circle avatar
-            CircleAvatar(
-              radius: 20,
-              backgroundImage: NetworkImage(image),
-            ),
-            //=========sizedbox==========
-            const SizedBox(
-              width: 10,
-            ),
-            //========column===========
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            //=======row========
+            Row(
               children: [
-                //==========text==========
+                // circle avatar
+                CircleAvatar(
+                  radius: 20,
+                  backgroundImage: NetworkImage(image),
+                ),
+                //=========sizedbox==========
+                const SizedBox(
+                  width: 10,
+                ),
+                //========column===========
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    //==========text==========
+                    Text(
+                      name,
+                      style: const TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w600),
+                    ),
+                    //========text=========
+                    Text(
+                      message,
+                      style: const TextStyle(
+                          color: Colors.grey, fontWeight: FontWeight.w300),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            //========column=========
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                //========text=========
                 Text(
                   name,
                   style: const TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.w600),
                 ),
-                //========text=========
+                //========text=============
                 Text(
                   message,
                   style: const TextStyle(
                       color: Colors.grey, fontWeight: FontWeight.w300),
                 ),
               ],
-            ),
+            )
           ],
         ),
-        //========column=========
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            //========text=========
-            Text(
-              name,
-              style: const TextStyle(
-                  color: Colors.grey, fontWeight: FontWeight.w600),
-            ),
-            //========text=============
-            Text(
-              message,
-              style: const TextStyle(
-                  color: Colors.grey, fontWeight: FontWeight.w300),
-            ),
-          ],
-        )
-      ],
+      ),
     );
   }
 }
