@@ -19,17 +19,29 @@ class InChatsPage extends StatelessWidget {
         children: [
           //=========container widget==========
           Container(
-            height: 120,
+            height: 80,
             color: const Color(0xff202c36),
             //=========padding widget===========
-            child: const Padding(
-              padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
               // column
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  //   ),
-                  // )
+                  Row(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: const Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                          size: 30,
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
