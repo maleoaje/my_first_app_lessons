@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class InChatsPage extends StatelessWidget {
-  const InChatsPage({super.key});
+  final String userName;
+
+  const InChatsPage({super.key, required this.userName});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const PreferredSize(preferredSize: Size(0, 0), child: SizedBox()),
       backgroundColor: const Color(0xff121d27),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        shape: CircleBorder(),
-        backgroundColor: Color(0xff01af99),
-        child: Icon(Icons.chat),
-      ),
+
       //listview widget
       body: ListView(
         children: [
@@ -23,23 +21,63 @@ class InChatsPage extends StatelessWidget {
             color: const Color(0xff202c36),
             //=========padding widget===========
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
+              padding: const EdgeInsets.fromLTRB(10, 40, 10, 0),
               // column
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      InkWell(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const Icon(
-                          Icons.arrow_back,
-                          color: Colors.white,
-                          size: 30,
-                        ),
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Icon(
+                              Icons.arrow_back,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          const CircleAvatar(
+                            radius: 15,
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            userName,
+                            style: const TextStyle(color: Colors.white),
+                          ),
+                        ],
                       ),
+                      const Row(
+                        children: [
+                          FaIcon(
+                            FontAwesomeIcons.video,
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Icon(
+                            Icons.phone,
+                            color: Colors.white,
+                            size: 30,
+                          ),
+                          SizedBox(
+                            width: 12,
+                          ),
+                          Icon(
+                            Icons.more_vert_rounded,
+                            color: Colors.white,
+                            size: 30,
+                          )
+                        ],
+                      )
                     ],
                   )
                 ],

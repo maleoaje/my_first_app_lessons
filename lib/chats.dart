@@ -150,7 +150,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'chibuike',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -158,7 +158,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'chizi',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -166,7 +166,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'ada',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -174,7 +174,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'eguko',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -182,7 +182,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'kamsi',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -190,7 +190,7 @@ class ChatsPage extends StatelessWidget {
           chatCard(
             context,
             'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'goku',
+            'aka',
             'turn to ultra instinct',
             '6:00am',
             '10',
@@ -203,14 +203,18 @@ class ChatsPage extends StatelessWidget {
 
   Widget chatCard(context, image, name, message, time, messageCount) {
     //========row========-==
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         // Navigator.push(context, MaterialPageRoute(
         //           builder: (context) => SecondPage(),
-        //         ));
+        //         ))
 
-        Navigator.push(context,
-            MaterialPageRoute(builder: (context) => const InChatsPage()));
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+                builder: (context) => InChatsPage(
+                      userName: name,
+                    )));
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
