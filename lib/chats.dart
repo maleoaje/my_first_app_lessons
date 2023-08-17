@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/chidera_tasks.dart';
 import 'package:my_first_app/in_chat.dart';
 
 class ChatsPage extends StatelessWidget {
@@ -9,11 +10,14 @@ class ChatsPage extends StatelessWidget {
     return Scaffold(
       appBar: const PreferredSize(preferredSize: Size(0, 0), child: SizedBox()),
       backgroundColor: const Color(0xff121d27),
-      floatingActionButton: const FloatingActionButton(
-        onPressed: null,
-        shape: CircleBorder(),
-        backgroundColor: Color(0xff01af99),
-        child: Icon(Icons.chat),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => const ChiderasTasks()));
+        },
+        shape: const CircleBorder(),
+        backgroundColor: const Color(0xff01af99),
+        child: const Icon(Icons.chat),
       ),
       //listview widget
       body: ListView(
@@ -149,7 +153,7 @@ class ChatsPage extends StatelessWidget {
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'images/animegirl.jpg',
             'chibuike',
             'turn to ultra instinct',
             '6:00am',
@@ -157,7 +161,7 @@ class ChatsPage extends StatelessWidget {
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'images/dog.jpg',
             'chizi',
             'turn to ultra instinct',
             '6:00am',
@@ -165,7 +169,7 @@ class ChatsPage extends StatelessWidget {
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'images/horse.jpeg',
             'ada',
             'turn to ultra instinct',
             '6:00am',
@@ -173,15 +177,15 @@ class ChatsPage extends StatelessWidget {
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
-            'eguko',
+            'images/lioness.jpg',
+            'ekugo',
             'turn to ultra instinct',
             '6:00am',
             '10',
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'images/racoon.jpg',
             'kamsi',
             'turn to ultra instinct',
             '6:00am',
@@ -189,7 +193,7 @@ class ChatsPage extends StatelessWidget {
           ),
           chatCard(
             context,
-            'https://images.unsplash.com/photo-1636391671189-b74857c38626?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3000&q=80',
+            'images/squirl.jpg',
             'aka',
             'turn to ultra instinct',
             '6:00am',
@@ -214,6 +218,7 @@ class ChatsPage extends StatelessWidget {
             MaterialPageRoute(
                 builder: (context) => InChatsPage(
                       userName: name,
+                      userImage: image,
                     )));
       },
       child: Padding(
@@ -227,7 +232,7 @@ class ChatsPage extends StatelessWidget {
                 // circle avatar
                 CircleAvatar(
                   radius: 20,
-                  backgroundImage: NetworkImage(image),
+                  backgroundImage: AssetImage(image),
                 ),
                 //=========sizedbox==========
                 const SizedBox(
