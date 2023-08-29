@@ -1,0 +1,91 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_first_app/constants.dart';
+
+class TikTikPage extends StatefulWidget {
+  const TikTikPage({super.key});
+
+  @override
+  State<TikTikPage> createState() => _TikTikPageState();
+}
+
+class _TikTikPageState extends State<TikTikPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const Center(
+                child: Column(
+                  children: [
+                    Text(
+                      'Tik TIK',
+                      style:
+                          TextStyle(fontSize: 28, fontWeight: FontWeight.w600),
+                    ),
+                    Text(
+                      'Choose your interest',
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w200),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10),
+                    height: 80,
+                    width: 80,
+                    decoration: BoxDecoration(
+                        border: Border.all(width: .05),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: const Column(
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.book,
+                          size: 30,
+                          color: orange,
+                        ),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text(
+                          'Education',
+                          style: TextStyle(fontSize: 12),
+                        )
+                      ],
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          height: 60,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(30),
+            color: Colors.black,
+          ),
+          child: const Center(
+            child: Text(
+              'Continue',
+              style: TextStyle(color: Colors.white, fontSize: 16),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

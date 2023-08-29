@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/constants.dart';
 import 'package:my_first_app/in_chat.dart';
 import 'package:my_first_app/social_app.dart';
+import 'package:my_first_app/tik_tik.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -199,6 +201,27 @@ class ChatsPage extends StatelessWidget {
             '6:00am',
             '10',
           ),
+          const SizedBox(
+            height: 20,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const TikTikPage()));
+            },
+            child: Container(
+              height: 40,
+              width: 200,
+              decoration:
+                  const BoxDecoration(color: Color.fromARGB(255, 48, 100, 132)),
+              child: const Center(
+                child: Text(
+                  'Go to Tik Tik App',
+                  style: TextStyle(color: white, fontWeight: FontWeight.w700),
+                ),
+              ),
+            ),
+          )
           //=====row======
         ],
       ),
