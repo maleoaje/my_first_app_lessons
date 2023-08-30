@@ -11,10 +11,15 @@ class SocialApp extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: brown,
-        leading: const Icon(
-          Icons.keyboard_backspace,
-          color: orange,
-          size: 35,
+        leading: InkWell(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.keyboard_backspace,
+            color: orange,
+            size: 35,
+          ),
         ),
         actions: const [
           Icon(

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/constants.dart';
 import 'package:my_first_app/in_chat.dart';
 import 'package:my_first_app/social_app.dart';
-import 'package:my_first_app/tik_tik.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -29,8 +27,8 @@ class ChatsPage extends StatelessWidget {
             height: 120,
             color: const Color(0xff202c36),
             //=========padding widget===========
-            child: const Padding(
-              padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(10, 30, 10, 0),
               // column
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -40,14 +38,30 @@ class ChatsPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      //=======text widget========
-                      Text(
-                        'WhatsApp',
-                        style:
-                            TextStyle(color: Color(0xffa3b0b8), fontSize: 16),
+                      Row(
+                        children: [
+                          InkWell(
+                            onTap: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Icon(
+                              Icons.arrow_back,
+                              color: Color(0xffa3b0b8),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          //=======text widget========
+                          const Text(
+                            'WhatsApp',
+                            style: TextStyle(
+                                color: Color(0xffa3b0b8), fontSize: 16),
+                          ),
+                        ],
                       ),
                       //row
-                      Row(
+                      const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           //====icon widget=====
@@ -76,11 +90,11 @@ class ChatsPage extends StatelessWidget {
                   ),
                   //=============end of appbar===================
                   //=============sizedbox widget==========================
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   //===============padding widget================
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(left: 8, right: 8),
                     //=========page headings============
                     child: Row(
@@ -201,27 +215,7 @@ class ChatsPage extends StatelessWidget {
             '6:00am',
             '10',
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const TikTikPage()));
-            },
-            child: Container(
-              height: 40,
-              width: 200,
-              decoration:
-                  const BoxDecoration(color: Color.fromARGB(255, 48, 100, 132)),
-              child: const Center(
-                child: Text(
-                  'Go to Tik Tik App',
-                  style: TextStyle(color: white, fontWeight: FontWeight.w700),
-                ),
-              ),
-            ),
-          )
+
           //=====row======
         ],
       ),

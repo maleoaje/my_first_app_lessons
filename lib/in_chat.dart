@@ -159,48 +159,6 @@ class _InChatsPageState extends State<InChatsPage> {
           )
         ],
       ),
-      // bottomNavigationBar: Container(
-      //     color: const Color(0xff202c36),
-      //     height: 50,
-      //     child: Row(
-      //       children: [
-      //         const SizedBox(
-      //           width: 8,
-      //         ),
-      //         const Icon(
-      //           Icons.emoji_emotions,
-      //           color: Colors.white,
-      //         ),
-      //         const SizedBox(
-      //           width: 10,
-      //         ),
-      //         SizedBox(
-      //           width: 240,
-      //           child: TextFormField(),
-      //         ),
-      //         const Icon(
-      //           Icons.attach_file,
-      //           color: Colors.white,
-      //         ),
-      //         const SizedBox(
-      //           width: 8,
-      //         ),
-      //         const Icon(
-      //           Icons.camera_alt_rounded,
-      //           color: Colors.white,
-      //         ),
-      //         const SizedBox(
-      //           width: 8,
-      //         ),
-      //         const CircleAvatar(
-      //           backgroundColor: Color(0xff01af99),
-      //           child: Icon(
-      //             Icons.mic_none_sharp,
-      //             color: Colors.white,
-      //           ),
-      //         )
-      //       ],
-      //     )),
     );
   }
 
