@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_app/in_chat.dart';
-import 'package:my_first_app/social_app.dart';
+import 'package:my_first_app/chidera/in_chat.dart';
 
 class ChatsPage extends StatelessWidget {
   const ChatsPage({super.key});
@@ -11,10 +10,7 @@ class ChatsPage extends StatelessWidget {
       appBar: const PreferredSize(preferredSize: Size(0, 0), child: SizedBox()),
       backgroundColor: const Color(0xff121d27),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (context) => const SocialApp()));
-        },
+        onPressed: () {},
         shape: const CircleBorder(),
         backgroundColor: const Color(0xff01af99),
         child: const Icon(Icons.chat),

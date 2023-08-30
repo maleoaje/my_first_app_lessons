@@ -8,7 +8,7 @@ class ChiderasTasks extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 1,
-        title: const Text("Chidera's Task"),
+        title: const Text("Images and Names"),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -20,7 +20,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/animefood.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text(
                     'Yumiko',
@@ -33,7 +35,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/animegirl.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('mako',
                       style:
@@ -45,7 +49,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/animegirl2andafox.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('firex',
                       style:
@@ -57,7 +63,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/batman.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('batman',
                       style:
@@ -69,7 +77,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/dog.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('drex',
                       style:
@@ -81,7 +91,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/fastcar.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('miles',
                       style:
@@ -93,7 +105,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/horse.jpeg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('arabian',
                       style:
@@ -105,7 +119,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/lioness.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('brainstorm',
                       style:
@@ -117,7 +133,9 @@ class ChiderasTasks extends StatelessWidget {
                 children: [
                   Image.asset(
                     'images/racoon.jpg',
-                    height: 100,
+                    height: 200,
+                    width: 200,
+                    fit: BoxFit.cover,
                   ),
                   const Text('goku',
                       style:
